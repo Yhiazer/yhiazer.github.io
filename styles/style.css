@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+li{ font-size: 1.25em;}
+
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(75, 128, 242); }
+
+header{
+    background-color: rgb(245,245,245);
+    position: fixed;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+header a{
+    padding: 25px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color:rgb(75, 128, 242);
+}
+
+#datos-personales .container{
+    display: flex;
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#datos-personales .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#datos-personales .imagen-perfil{
+    width: 50%;
+    text-align: center;
+}
+
+#experiencia{
+    text-align: center;
+}
+
+#experiencia h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#experiencia .empresas{
+    display: flex;
+    justify-content: center;
+}
+
+#experiencia .exp{
+    padding: 50px 0px;
+    margin: 30px;
+}
+
+#hab-lab{
+    text-align: center;
+}
+
+#hab-lab h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#hab-lab .habilidades{
+    display: flex;
+    justify-content: center;
+}
+
+#hab-lab .hab{
+    padding: 50px 0px;
+    width: 50%;
+}
+
+#hab-lab ul{
+    text-align: justify;
+    padding-left: 200px;
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+
+    #experiencia h2{
+        font-size: 4em;
+    }
+
+    #experiencia h3{
+        margin-top: 0;
+    }
+}
