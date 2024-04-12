@@ -1,0 +1,48 @@
+.barra-vida {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.barra-vida .relleno {
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.barra-vida .texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+.barra-vida2 {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.barra-vida2 .relleno {
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.barra-vida2 .texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
