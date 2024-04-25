@@ -14,18 +14,21 @@ class Character {
         return this.health > 0;
     }
 
-    calcularCritico(danyo){
+    calcularEvento(danyo){
         var x = Math.floor(Math.random() * 5);
         if (x == 0) {
             danyo = danyo*3;
             console.log("Critico "+danyo+" Damage!!");
+        } else if (x == 1 || x == 2) {
+            danyo = danyo*0;
+            console.log("Fallo!!");
         }
         return danyo;
     }
 
     attack_manual_heroe(target) {
         console.log(`${this.name} deals ${this.damage} DMG to ${target.name}`);
-        target.health -= this.calcularCritico(this.damage);
+        target.health -= this.calcularEvento(this.damage);
         actualizarBarraVida2(target.health, target.maxhealth);
         if (target.health <= 0) {
             enemigo.setAttribute("src", "img/explosion.gif");
@@ -37,7 +40,7 @@ class Character {
 
     attack_manual_limo(target) {
         console.log(`${this.name} deals ${this.damage} DMG to ${target.name}`);
-        target.health -= this.calcularCritico(this.damage);
+        target.health -= this.calcularEvento(this.damage);
         actualizarBarraVida(target.health, target.maxhealth);
         if (target.health <= 0) {
             heroe.setAttribute("src", "img/explosion.gif");
@@ -63,31 +66,6 @@ var textoVida = document.getElementById("textoVida");
 var barraVida2 = document.getElementById("barraVida2");
 var rellenoVida2 = document.getElementById("rellenoVida2");
 var textoVida2 = document.getElementById("textoVida2");
-
-function actualizarBarraVida(vidaActual, vidaMaxima) {
-    var porcentajeVida = (vidaActual / vidaMaxima) * 100;
-
-    rellenoVida.style.width = porcentajeVida + "%";
-
-    textoVida.textContent = "Vida: " + vidaActual + " / " + vidaMaxima;
-}
-
-function actualizarBarraVida2(vidaActual, vidaMaxima) {
-    var porcentajeVida = (vidaActual / vidaMaxima) * 100;
-
-    rellenoVida2.style.width = porcentajeVida + "%";
-
-    textoVida2.textContent = "Vida: " + vidaActual + " / " + vidaMaxima;
-}
-
-document.addEventListener("keydown", function (event) {
-    const tecla = event.key;
-    if (tecla === "x") {
-        hero.attack_manual_heroe(enemy);
-    } else if (tecla === "n") {
-        enemy.attack_manual_limo(hero);
-    }
-});
 
 //Comenzar combate
 
@@ -181,12 +159,27 @@ function calcularDanyo(){
     enemy.attack_manual_limo(hero);
 }
 
-// Modifica la función setInterval para incluir la verificación de posición
+function actualizarBarraVida(vidaActual, vidaMaxima) {
+    var porcentajeVida = (vidaActual / vidaMaxima) * 100;
+
+    rellenoVida.style.width = porcentajeVida + "%";
+
+    textoVida.textContent = "Vida: " + vidaActual + " / " + vidaMaxima;
+}
+
+function actualizarBarraVida2(vidaActual, vidaMaxima) {
+    var porcentajeVida = (vidaActual / vidaMaxima) * 100;
+
+    rellenoVida2.style.width = porcentajeVida + "%";
+
+    textoVida2.textContent = "Vida: " + vidaActual + " / " + vidaMaxima;
+}
+
 setInterval(function () {
     manejarMovimiento();
     moverObjeto();
     moverObjeto2();
-    verificarPosicion(); // Llamada a la función de verificación de posición
+    verificarPosicion(); 
 }, 10);
 
 setInterval(function (){
