@@ -30,7 +30,7 @@ class Character {
         if (target.health <= 0) {
             enemigo.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
-                window.alert("J2 perdio");
+                window.alert("J2 perdio Super-Repete");
             },1000);
         }
     }
@@ -42,7 +42,7 @@ class Character {
         if (target.health <= 0) {
             heroe.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
-                window.alert("J1 perdio");
+                window.alert("J1 perdio Repete");
             },1000);
         }
     }
