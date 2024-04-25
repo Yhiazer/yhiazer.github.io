@@ -1,5 +1,3 @@
-//Ejercicio de practica Javascript
-
 //Objeto base para los personajes
 class Character {
     constructor(name, health, damage) {
@@ -33,7 +31,7 @@ class Character {
         if (target.health <= 0) {
             enemigo.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
-                window.alert("J2 perdio Super-Repete");
+                window.alert("J2 perdio");
             },1000);
         }
     }
@@ -45,7 +43,7 @@ class Character {
         if (target.health <= 0) {
             heroe.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
-                window.alert("J1 perdio Repete");
+                window.alert("J1 perdio");
             },1000);
         }
     }
@@ -58,16 +56,6 @@ class Character {
 
 const hero = new Character("Heroe", Math.floor(Math.random() * 5000 + 500), Math.floor(Math.random() * 10 + 1));
 const enemy = new Character("Limo", Math.floor(Math.random() * 5000 + 500), Math.floor(Math.random() * 10 + 1));
-
-var barraVida = document.getElementById("barraVida");
-var rellenoVida = document.getElementById("rellenoVida");
-var textoVida = document.getElementById("textoVida");
-
-var barraVida2 = document.getElementById("barraVida2");
-var rellenoVida2 = document.getElementById("rellenoVida2");
-var textoVida2 = document.getElementById("textoVida2");
-
-//Comenzar combate
 
 //Variables
 
@@ -83,6 +71,10 @@ var heroe = document.getElementById('heroe');
 var posX = Math.floor(Math.random() * 300);
 var posY = Math.floor(Math.random() * 300);
 
+var barraVida = document.getElementById("barraVida");
+var rellenoVida = document.getElementById("rellenoVida");
+var textoVida = document.getElementById("textoVida");
+
 function moverObjeto() {
     objeto.style.left = posX + 'px';
     objeto.style.top = posY + 'px';
@@ -94,6 +86,10 @@ var objeto2 = document.getElementById('player2');
 var enemigo = document.getElementById('enemigo');
 var posX2 = Math.floor(Math.random() * 300);
 var posY2 = Math.floor(Math.random() * 300);
+
+var barraVida2 = document.getElementById("barraVida2");
+var rellenoVida2 = document.getElementById("rellenoVida2");
+var textoVida2 = document.getElementById("textoVida2");
 
 function moverObjeto2() {
     objeto2.style.left = posX2 + 'px';
