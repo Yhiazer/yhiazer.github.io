@@ -180,18 +180,16 @@ setInterval(function () {
     verificarPosicion(); 
 }, 10);
 
-setInterval(function (){
-    actualizarDanyo();
-}, 3000);
-
 function actualizarDanyo(){
     hero.damage += Math.floor(Math.random() * 100 + 1);
     enemy.damage += Math.floor(Math.random() * 100 + 1);
 }
 
-//Fin
+setInterval(function (){
+    actualizarDanyo();
+}, 3000);
 
-window.alert("Vida Heroe: " + hero.maxhealth + "\nVida Slime: " + enemy.maxhealth);
+//Fin
 
 window.onload = function() {
     // Obtener los parámetros de la URL
@@ -204,4 +202,8 @@ window.onload = function() {
     // Establecer las fuentes de las imágenes en la página
     document.getElementById('hero').src = heroImageSrc;
     document.getElementById('enemy').src = enemyImageSrc;
+
+    // Actualizar la barra de vida del héroe y del enemigo
+    actualizarBarraVida(hero.health, hero.maxhealth);
+    actualizarBarraVida2(enemy.health, enemy.maxhealth);
 }
