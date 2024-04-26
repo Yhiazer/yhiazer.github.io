@@ -32,6 +32,7 @@ class Character {
             enemigo.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
                 window.alert("J2 perdio");
+                window.location.href = "../Juego de Pelea/gameover.html";
             },1000);
         }
     }
@@ -44,6 +45,7 @@ class Character {
             heroe.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
                 window.alert("J1 perdio");
+                window.location.href = "../Juego de Pelea/gameover.html";
             },1000);
         }
     }

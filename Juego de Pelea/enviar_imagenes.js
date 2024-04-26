@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         params.append('enemyImage', selectedEnemyImage.src);
 
         // Redirigir a la otra página con los parámetros de URL
-        window.location.href = 'index.html?' + params.toString();
+        window.location.href = 'pelea.html?' + params.toString();
     });
 });
