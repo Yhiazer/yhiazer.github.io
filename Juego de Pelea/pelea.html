@@ -13,31 +13,44 @@
     <link rel="stylesheet" href="style\style.css">
 </head>
 
-<body>
-    <h2>Fight!</h2>
+<body style="background-color: gray;">
     <!-- Estadicticas Jugadores-->
-    <div class="container" id="caballero" style="margin: 40px;">
-        <img id="heroe" src="img/apartense.png" width="150px" alt="caballero.jpg">
-        <div class="barra-vida" id="barraVida">
-            <div class="relleno" id="rellenoVida"></div>
-            <div class="texto" id="textoVida"></div>
-        </div>
-    </div>
-    <div class="container" id="slime" style="margin: 40px;">
-        <img id="enemigo" src="img/slime.jpg" width="150px" alt="slime.jpg">
-        <div class="barra-vida" id="barraVida2">
-            <div class="relleno" id="rellenoVida2"></div>
-            <div class="texto" id="textoVida2"></div>
-        </div>
-    </div>
+
     <!-- Fin Estadicticas Jugadores-->
 
-    <!-- Sprite Jugadores-->
-    <div id="player1" style=" width: 50px; height: 50px; position: absolute;">
-        <img id="hero" src="" width="50px" alt="">
+    <div class="container" style="display: flex; padding-top: 1%;">
+        <div class="stats" style="width: 30%; text-align: center; border-radius: 4%;">
+            <div class="card" style="background-color: #5d6c74;">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">Jugador 1</h5>
+                    <img id="heroe" src="img/luffy.gif" height="125px" alt="caballero.jpg" style="margin-bottom: 2%;">
+                    <div class="barra-vida" id="barraVida">
+                        <div class="relleno" id="rellenoVida"></div>
+                        <div class="texto" id="textoVida"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats" style="width: 30%; text-align: center; border-radius: 4%; margin-left: 50%;">
+            <div class="card" style="background-color: #5d6c74;">
+                <div class="card-body">
+                    <h5 style="font-weight: bold;">Jugador 2</h5>
+                    <img id="enemigo" src="img/zoro.gif" height="125px" alt="slime.jpg" style="margin-bottom: 5%;">
+                    <div class="barra-vida" id="barraVida2">
+                        <div class="relleno" id="rellenoVida2"></div>
+                        <div class="texto" id="textoVida2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="player2" style=" width: 50px; height: 50px; position: absolute;">
-        <img id="enemy" src="" width="50px" alt="">
+
+    <!-- Sprite Jugadores-->
+    <div id="player1" style=" width: 75px; height: 75px; position: absolute;">
+        <img id="hero" src="" width="75px" alt="">
+    </div>
+    <div id="player2" style=" width: 75px; height: 75px; position: absolute;">
+        <img id="enemy" src="" width="75px" alt="">
     </div>
     <!-- Fin Sprite Jugadores-->
     <script src="./JS.js"></script>

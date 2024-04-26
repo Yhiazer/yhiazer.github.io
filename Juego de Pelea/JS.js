@@ -28,7 +28,14 @@ class Character {
         console.log(`${this.name} deals ${this.damage} DMG to ${target.name}`);
         target.health -= this.calcularEvento(this.damage);
         actualizarBarraVida2(target.health, target.maxhealth);
-        if (target.health <= 0) {
+        if (target.health <= 0 && this.health <= 0) {
+            enemigo.setAttribute("src", "img/explosion.gif");
+            heroe.setAttribute("src", "img/explosion.gif");
+            setTimeout(function(){
+                window.alert("Empate");
+                window.location.href = "../Juego de Pelea/gameover.html";
+            },1000);
+        } else if (target.health <= 0) {
             enemigo.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
                 window.alert("J2 perdio");
@@ -41,7 +48,14 @@ class Character {
         console.log(`${this.name} deals ${this.damage} DMG to ${target.name}`);
         target.health -= this.calcularEvento(this.damage);
         actualizarBarraVida(target.health, target.maxhealth);
-        if (target.health <= 0) {
+        if (target.health <= 0 && this.health <= 0) {
+            enemigo.setAttribute("src", "img/explosion.gif");
+            heroe.setAttribute("src", "img/explosion.gif");
+            setTimeout(function(){
+                window.alert("Empate");
+                window.location.href = "../Juego de Pelea/gameover.html";
+            },1000);
+        } else if (target.health <= 0) {
             heroe.setAttribute("src", "img/explosion.gif");
             setTimeout(function(){
                 window.alert("J1 perdio");
@@ -139,16 +153,16 @@ function verificarPosicion() {
     var distanciaX = Math.abs(posX - posX2);
     var distanciaY = Math.abs(posY - posY2);
 
-    if (distanciaX <= 30 && distanciaY <= 30) {
+    if (distanciaX <= 60 && distanciaY <= 55) {
         reposicionar();
     }
 }
 
 function reposicionar() {
-    posX = Math.floor(Math.random() * 500);
-    posY = Math.floor(Math.random() * 500);
-    posX2 = Math.floor(Math.random() * 500);
-    posY2 = Math.floor(Math.random() * 500);
+    posX = Math.floor(Math.random() * (ventanaAncho - 100));
+    posY = Math.floor(Math.random() * (ventanaAlto - 100));
+    posX2 = Math.floor(Math.random() * (ventanaAncho - 100));
+    posY2 = Math.floor(Math.random() * (ventanaAlto - 100));
     calcularDanyo();
 }
 
