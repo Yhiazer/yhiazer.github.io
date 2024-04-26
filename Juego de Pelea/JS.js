@@ -191,3 +191,15 @@ function actualizarDanyo(){
 
 window.alert("Vida Heroe: " + hero.maxhealth + "\nVida Slime: " + enemy.maxhealth);
 
+window.onload = function() {
+    // Obtener los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Obtener las URLs de las imágenes de los parámetros de URL
+    const heroImageSrc = urlParams.get('heroImage');
+    const enemyImageSrc = urlParams.get('enemyImage');
+
+    // Establecer las fuentes de las imágenes en la página
+    document.getElementById('hero').src = heroImageSrc;
+    document.getElementById('enemy').src = enemyImageSrc;
+}
