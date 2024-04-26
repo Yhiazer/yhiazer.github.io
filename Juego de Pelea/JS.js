@@ -216,7 +216,7 @@ window.onload = function() {
     // Establecer las fuentes de las imágenes en la página
     document.getElementById('hero').src = heroImageSrc;
     document.getElementById('enemy').src = enemyImageSrc;
-    document.getElementById('hereo').src = heroImageSrc;
+    document.getElementById('heroe').src = heroImageSrc;
     document.getElementById('enemigo').src = enemyImageSrc;
 
     // Actualizar la barra de vida del héroe y del enemigo
